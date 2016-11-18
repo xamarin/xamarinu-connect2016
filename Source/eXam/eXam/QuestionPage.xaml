@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eXam.QuestionPage"
+             Title="eXam">
+  
+  <Grid Padding="20" ColumnSpacing="10" RowSpacing="20" AutomationId="questionPage">
+
+	  <Grid.RowDefinitions>
+		  <RowDefinition Height="auto" />
+		  <RowDefinition Height="auto" />
+		  <RowDefinition Height="*"    />
+		  <RowDefinition Height="auto" />
+	  </Grid.RowDefinitions>
+
+	  <Grid.ColumnDefinitions>
+		  <ColumnDefinition />
+		  <ColumnDefinition />
+		</Grid.ColumnDefinitions>
+    
+    <Label x:Name="lblQuestion"
+      AutomationId="questionText"     
+			Grid.ColumnSpan="2"
+			Text="Question" />
+
+		<Button x:Name="btnTrue"
+			AutomationId="trueButton"
+      Grid.Row="1"
+			Text="True" 
+			TextColor="White" 
+			BackgroundColor="#0892D0">
+		</Button>
+
+		<Button x:Name="btnFalse"
+			AutomationId="falseButton"
+      Grid.Row="1" 
+			Grid.Column="1"
+			Text="False" 
+			TextColor="White" 
+			BackgroundColor="#D0082E">
+		</Button>
+
+		<Label x:Name="lblResponse"
+			AutomationId="resultText"
+      Grid.Row="2" 
+			Grid.RowSpan="2"
+			Text="Response" />
+
+		<Button x:Name="btnNext"
+			AutomationId="nextButton"
+      Grid.Row="3" 
+			Grid.Column="1"
+			Text="Next"
+			TextColor="White"
+			BackgroundColor="#08D046">
+		</Button>
+  
+  </Grid>
+
+</ContentPage>

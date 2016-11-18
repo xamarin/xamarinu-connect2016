@@ -1,0 +1,2 @@
+MainPackage=C:\VSConnect\eXam\eXam.UWP\bin\x86\Release\eXam.UWP_1.0.1.0_x86.appx
+SymbolPackage=C:\VSConnect\exam\eXam.UWP\bin\x86\Debug\eXam.UWP_1.0.1.0_Test\eXam.UWP_1.0.1.0_x86.appxsym
