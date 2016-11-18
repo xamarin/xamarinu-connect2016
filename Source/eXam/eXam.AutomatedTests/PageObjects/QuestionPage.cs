@@ -40,16 +40,9 @@ namespace eXam.AutomatedTests
 		{
 			app.Tap(c => c.Marked("nextButton"));
 
-			// TODO: I don't like this WaitForElement operation one little bit. Am trying
-			// to replace it with something better. I need a predicate that can wait for a 
-			// one-of-two choices to appear
-			try
-			{
-				app.WaitForElement(c => c.Marked("questionPage"));
-			}
-			catch
-			{
-			}
+            // We want to get either another Question Page or the Results Page
+            app.WaitFor(() => app.Query(c => c.Marked("questionPage")).Any() ||
+                app.Query(c => c.Marked("resultText")).Any());
 
 			return this;
 		}
